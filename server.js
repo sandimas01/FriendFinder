@@ -3,7 +3,7 @@ var http = require("http");
 var fs = require("fs");
 
 // Set our port to 3000
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Create our server
 var server = http.createServer(handleRequest);
@@ -22,6 +22,10 @@ function handleRequest(req, res) {
 }
 
 // Starts our server
-server.listen(PORT, function() {
+app.listen(PORT, function() {
   console.log("Server is listening on PORT: " + PORT);
 });
+
+// var PORT = process.env.PORT || 3000;
+// ...
+// app.listen(PORT, function() {
