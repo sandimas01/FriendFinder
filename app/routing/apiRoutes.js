@@ -19,6 +19,11 @@ app.post('/api/friends', function(req, res) {
     // Add new user
     friends.push(userInput);
 
+// match logic goes here 
+// for loop i++
+// math.abs()
+//modal popup
+
     });
 
 }
